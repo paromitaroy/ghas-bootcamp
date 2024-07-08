@@ -97,3 +97,7 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+
+    # Policy as Code
+    - name: Advance Security Policy as Code
+      uses: advanced-security/policy-as-code@v2.7.3
