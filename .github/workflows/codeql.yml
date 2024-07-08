@@ -99,23 +99,23 @@ jobs:
         category: "/language:${{matrix.language}}"
 
     # Policy as Code
-    - name: Advance Security Policy as Code
-      uses: advanced-security/policy-as-code@policy
-      with:
-          # The owner/repo of where the policy is stored
-          # This generally is primarily used for a single repository that defines
-          #  your organizations security policy
-          policy: GeekMasher/security-queries
+    # - name: Advance Security Policy as Code
+    #   uses: advanced-security/policy-as-code@policy
+    #   with:
+    #       # The owner/repo of where the policy is stored
+    #       # This generally is primarily used for a single repository that defines
+    #       #  your organizations security policy
+    #       policy: GeekMasher/security-queries
 
-          # The path where the policy lives. This might be in either the current
-          #  repository or in a remote repository.
-          policy-path: policies/basic.yml
+    #       # The path where the policy lives. This might be in either the current
+    #       #  repository or in a remote repository.
+    #       policy-path: policies/basic.yml
 
-          # The branch you want to target using `policy` argument
-          policy-branch: main
+    #       # The branch you want to target using `policy` argument
+    #       policy-branch: main
 
-          # GitHub Personal Access Token to access the GitHub API.
-          # Secret Scanning and Dependabot do not allow their resources to be
-          #  exposed to Actions so this might need to be set using a token that has
-          #  the ability to access the resources
-         # token: ${{ secrets.ACCESS_TOKEN }}
+    #       # GitHub Personal Access Token to access the GitHub API.
+    #       # Secret Scanning and Dependabot do not allow their resources to be
+    #       #  exposed to Actions so this might need to be set using a token that has
+    #       #  the ability to access the resources
+    #      # token: ${{ secrets.ACCESS_TOKEN }}
