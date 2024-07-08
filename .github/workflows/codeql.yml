@@ -100,4 +100,22 @@ jobs:
 
     # Policy as Code
     - name: Advance Security Policy as Code
-      uses: advanced-security/policy-as-code@v2.7.3
+      uses: advanced-security/policy-as-code@policy
+      with:
+          # The owner/repo of where the policy is stored
+          # This generally is primarily used for a single repository that defines
+          #  your organizations security policy
+          policy: GeekMasher/security-queries
+
+          # The path where the policy lives. This might be in either the current
+          #  repository or in a remote repository.
+          policy-path: policies/basic.yml
+
+          # The branch you want to target using `policy` argument
+          policy-branch: main
+
+          # GitHub Personal Access Token to access the GitHub API.
+          # Secret Scanning and Dependabot do not allow their resources to be
+          #  exposed to Actions so this might need to be set using a token that has
+          #  the ability to access the resources
+         # token: ${{ secrets.ACCESS_TOKEN }}
